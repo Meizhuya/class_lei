@@ -81,3 +81,48 @@ int main()
 
 
 权限
+
+#include<iostream>
+using namespace std;
+#include<string>
+
+//访问权限
+//公共权限 public  成员 类内可以访问 类外可以访问
+
+//保护权限 protected  成员 类内可以访问 类外不可以访问
+
+//私有权限 private  成员 类内可以访问 类外不可以访问
+
+class Person 
+{
+public:
+
+//属性
+	string  m_Name;//姓名
+protected:
+	string m_car;
+
+private:
+	int m_password;
+
+
+public:
+	void func()
+	{
+		m_Name = "张三";
+		m_car = "拖拉机";
+		m_password = 123456;
+	}
+};
+
+int main()
+{
+	//创建具体学生
+	Person p1;
+	
+	p1.m_Name = "李四";
+
+	system("pause");
+	return 0;
+
+}
